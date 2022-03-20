@@ -1,9 +1,17 @@
-let list1 = [1, 1, 2, 4, 9, 18], list2 = [1, 3, 4, 15, 24]
-
 class Solution {
     func mergeTwoLists(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
-        let list3 = list1 + list2
-        return list3.sorted()
+        if(list1 == nil) {return list2}
+        if(list2 == nil) {return list1}
+        var result:ListNode? = nil
+        
+        if(list1!.val <= list2!.val) {
+            result = list1
+            result!.next = mergeTwoLists(list1!.next,list2)
+        }
+        else {
+            result = list2
+            result!.next = mergeTwoLists(list1,list2!.next)
+        }
+        return result
     }
 }
-Solution().mergeTwoLists(list1, list2)
