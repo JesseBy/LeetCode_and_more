@@ -5,9 +5,8 @@ class Solution {
     
     func isValid(_ s: String) -> Bool {
         
-        if s.count % 2 != 0 {
-            print("false1")
-            return false
+        if s.count % 2 != 0 { 
+            return false 
         }
         
         var stack: [Character] = []
@@ -19,12 +18,10 @@ class Solution {
             case "{": stack.append("}")
             default:
                 if stack.isEmpty || stack.removeLast() != character {
-                    print("false2")
                     return false
                 }
             }
         }
-        print(stack.isEmpty)
         return stack.isEmpty
     }
     
@@ -41,7 +38,6 @@ class Solution {
 //            }
 //        }
 //
-//        print(stack.isEmpty)
 //        return stack.isEmpty
 //    }
 }
