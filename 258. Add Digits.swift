@@ -1,5 +1,3 @@
-let num = 38
-
 class Solution {
     func addDigits(_ num: Int) -> Int {
         if num == 0 { return 0 }
@@ -11,4 +9,4 @@ class Solution {
 
 Solution().addDigits(num)
 
-//i dont understand how it works
+//I don't understand how it works
