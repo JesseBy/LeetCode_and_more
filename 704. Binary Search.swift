@@ -8,7 +8,7 @@ class Solution {
         var right = nums.count - 1
         
         while left <= right {
-            let mid = left + ((right - left) / 2)
+            let mid = (left + right) / 2
             let midValue = nums[mid]
             
             if midValue == target { return mid }
