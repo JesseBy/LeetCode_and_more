@@ -3,23 +3,22 @@ let nums = [-1, 0, 3, 5, 9, 12, 135], target = 9 //4
 class Solution {
     func search(_ nums: [Int], _ target: Int) -> Int {
         guard !nums.isEmpty else { return -1 }
-        
-        var left = 0
-        var right = nums.count - 1
-        
-        while left <= right {
-            let mid = (left + right) / 2
-            let midValue = nums[mid]
-            
-            if midValue == target { return mid }
-            
-            if target > nums[mid] {
-                left = mid + 1
+
+        var leftIndex = 0
+        var rightIndex = nums.count - 1
+
+        while leftIndex <= rightIndex {
+            let middleIndex = (leftIndex + rightIndex) / 2
+
+            if target == nums[middleIndex] { return middleIndex }
+
+            if target > nums[middleIndex] {
+                leftIndex = middleIndex + 1
             } else {
-                right = mid - 1
+                rightIndex = middleIndex - 1
             }
         }
-        
+
         return -1
     }
 }
