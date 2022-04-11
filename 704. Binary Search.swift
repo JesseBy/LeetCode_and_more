@@ -1,4 +1,4 @@
-let nums = [-1, 0, 3, 5, 9, 12], target = 9 //4
+let nums = [-1, 0, 3, 5, 9, 12, 135], target = 9 //4
 
 class Solution {
     func search(_ nums: [Int], _ target: Int) -> Int {
