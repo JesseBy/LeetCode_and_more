@@ -29,7 +29,7 @@ final class TreeNode {
 
 final class InvertBinaryTree {
     static func invert(_ node: TreeNode?) -> TreeNode? {
-        guard let rootNode = node else {return nil}
+        guard let rootNode = node else { return nil }
         
         //recurcively swap left and right
         let leftSideNode = invert(rootNode.left)
